@@ -68,6 +68,9 @@ importers:
       vue:
         specifier: ^3.4.25
         version: 3.4.26(typescript@5.4.5)
+      vue-clipboard3:
+        specifier: ^2.0.0
+        version: 2.0.0
       vue-i18n:
         specifier: 9.9.1
         version: 9.9.1(vue@3.4.26(typescript@5.4.5))
@@ -1533,6 +1536,9 @@ packages:
     resolution: {integrity: sha512-FxqpkPPwu1HjuN93Omfm4h8uIanXofW0RxVEW3k5RKx+mJJYSthzNhp32Kzxxy3YAEZ/Dc/EWN1vZRY0+kOhbw==}
     engines: {node: '>= 10'}
 
+  clipboard@2.0.11:
+    resolution: {integrity: sha512-C+0bbOqkezLIsmWSvlsXS0Q0bmkugu7jcfMIACB+RDEntIzQIkdr148we28AfSloQLRdZlYL/QYyrq05j/3Faw==}
+
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
@@ -1836,6 +1842,9 @@ packages:
   delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
+
+  delegate@3.2.0:
+    resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
 
   depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
@@ -2394,6 +2403,9 @@ packages:
 
   globjoin@0.1.4:
     resolution: {integrity: sha512-xYfnw62CKG8nLkZBfWbhWwDw02CHty86jfPcc2cr3ZfeuK9ysoVPPEUxf21bAD/rWAgk52SuBrLJlefNy8mvFg==}
+
+  good-listener@1.2.2:
+    resolution: {integrity: sha512-goW1b+d9q/HIwbVYZzZ6SsTr4IgE+WA44A0GmPIQstuOrgsFcT7VEJ48nmr9GaRtNu0XTKacFLGnBPAM6Afouw==}
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -3604,6 +3616,9 @@ packages:
   scule@1.3.0:
     resolution: {integrity: sha512-6FtHJEvt+pVMIB9IBY+IcCJ6Z5f1iQnytgyfKMhDKgmzYG+TeH/wx1y3l27rshSbLiSanrR9ffZDrEsmjlQF2g==}
 
+  select@1.1.2:
+    resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==}
+
   semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
@@ -3949,6 +3964,9 @@ packages:
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
+  tiny-emitter@2.1.0:
+    resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
+
   tmp@0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
@@ -4262,6 +4280,9 @@ packages:
       terser:
         optional: true
 
+  vue-clipboard3@2.0.0:
+    resolution: {integrity: sha512-Q9S7dzWGax7LN5iiSPcu/K1GGm2gcBBlYwmMsUc5/16N6w90cbKow3FnPmPs95sungns4yvd9/+JhbAznECS2A==}
+
   vue-demi@0.14.7:
     resolution: {integrity: sha512-EOG8KXDQNwkJILkx/gPcoL/7vH+hORoBaKgGe+6W7VFMvCYJfmF2dGbvgDroVnI8LU7/kTu8mbjRZGBU1z9NTA==}
     engines: {node: '>=12'}
@@ -4325,8 +4346,8 @@ packages:
     resolution: {integrity: sha512-OqedPIGOfsDlo31UNwYbCFMSaO9m9G/0faIHj5/dZFDMFqPTcx6UwqyOy3COEaEOg/9VsGIpdqn62W5KhoKSpg==}
     engines: {node: '>=0.8.0'}
 
-  websocket@1.0.34:
-    resolution: {integrity: sha512-PRDso2sGwF6kM75QykIesBijKSVceR6jL2G8NGYyq2XrItNC2P5/qL5XeR056GhA+Ly7JMFvJb9I312mJfmqnQ==}
+  websocket@1.0.35:
+    resolution: {integrity: sha512-/REy6amwPZl44DDzvRCkaI1q1bIiQB0mEFQLUrhz3z2EK91cp3n72rAjUlrTP0zV22HJIUOVHQGPxhFRjxjt+Q==}
     engines: {node: '>=4.0.0'}
 
   which-boxed-primitive@1.0.2:
@@ -5939,6 +5960,12 @@ snapshots:
 
   cli-width@3.0.0: {}
 
+  clipboard@2.0.11:
+    dependencies:
+      good-listener: 1.2.2
+      select: 1.1.2
+      tiny-emitter: 2.1.0
+
   cliui@8.0.1:
     dependencies:
       string-width: 4.2.3
@@ -6248,6 +6275,8 @@ snapshots:
   defu@6.1.4: {}
 
   delayed-stream@1.0.0: {}
+
+  delegate@3.2.0: {}
 
   depd@2.0.0: {}
 
@@ -7004,6 +7033,10 @@ snapshots:
       slash: 3.0.0
 
   globjoin@0.1.4: {}
+
+  good-listener@1.2.2:
+    dependencies:
+      delegate: 3.2.0
 
   gopd@1.0.1:
     dependencies:
@@ -8155,6 +8188,8 @@ snapshots:
 
   scule@1.3.0: {}
 
+  select@1.1.2: {}
+
   semver@5.7.2: {}
 
   semver@6.3.1: {}
@@ -8330,7 +8365,7 @@ snapshots:
 
   stompjs@2.3.3:
     optionalDependencies:
-      websocket: 1.0.34
+      websocket: 1.0.35
     transitivePeerDependencies:
       - supports-color
 
@@ -8579,6 +8614,8 @@ snapshots:
       readable-stream: 3.6.2
 
   through@2.3.8: {}
+
+  tiny-emitter@2.1.0: {}
 
   tmp@0.0.33:
     dependencies:
@@ -8978,6 +9015,10 @@ snapshots:
       sass: 1.76.0
       terser: 5.31.0
 
+  vue-clipboard3@2.0.0:
+    dependencies:
+      clipboard: 2.0.11
+
   vue-demi@0.14.7(vue@3.4.26(typescript@5.4.5)):
     dependencies:
       vue: 3.4.26(typescript@5.4.5)
@@ -9045,7 +9086,7 @@ snapshots:
 
   websocket-extensions@0.1.4: {}
 
-  websocket@1.0.34:
+  websocket@1.0.35:
     dependencies:
       bufferutil: 4.0.8
       debug: 2.6.9

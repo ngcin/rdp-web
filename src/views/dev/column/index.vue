@@ -129,7 +129,7 @@
     <el-dialog v-model="codeDialog.visible" title="代码" top="1vh" width="60%" append-to-body class="scrollbar"
       @close="closeCodeDialog">
       <div>
-        <el-link :underline="false" icon="DocumentCopy" v-copyText="value" v-copyText:callback="copyTextSuccess"
+        <el-link :underline="false" icon="DocumentCopy" @click="handleCopyCode(codeContent)"
           style="float:right">&nbsp;复制</el-link>
         <hljsVuePlugin.component :code="codeContent" />
       </div>
@@ -220,7 +220,10 @@ function syncColumn(type: number) {
     })
 }
 
-/************code generate */
+/************code generation start */
+import useClipboard from "vue-clipboard3";
+const { toClipboard } = useClipboard()
+
 const codeDialog = reactive({
   visible: false
 })
@@ -238,6 +241,19 @@ function generateTableCode() {
 function closeCodeDialog() {
   codeDialog.visible = false;
 }
+
+async function handleCopyCode(code: string) {
+  try {
+    await toClipboard(code)
+    ElMessage.success('复制成功')
+  } catch (e) {
+    ElMessage.error('复制失败')
+  }
+}
+
+/**************code generation end */
+
+
 /**
  * 重置查询
  */

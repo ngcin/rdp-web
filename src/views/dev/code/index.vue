@@ -40,7 +40,7 @@
       <!-- <div>{{ codeInfo?.types }}</div> -->
       <el-tabs v-model="activeName">
         <el-tab-pane v-for="(value, key) in codeInfo" :label="key" :name="key" :key="key">
-          <el-link :underline="false" icon="DocumentCopy" v-copyText="value" v-copyText:callback="copyTextSuccess"
+          <el-link :underline="false" icon="DocumentCopy" @click="handleCopyCode(value)"
             style="float:right">&nbsp;复制</el-link>
           <hljsVuePlugin.component :code="value" />
         </el-tab-pane>
@@ -206,6 +206,9 @@ function handleDelete(dataId?: number) {
 
 
 /*****************code dialog */
+import useClipboard from "vue-clipboard3";
+const { toClipboard } = useClipboard()
+
 const codeDialog = reactive({
   visible: false,
 });
@@ -216,6 +219,15 @@ function openCodeDialog(id?: number) {
   generateCode(id).then(({ data }) => {
     codeInfo.value = data
   })
+}
+
+async function handleCopyCode(code: string) {
+  try {
+    await toClipboard(code)
+    ElMessage.success('复制成功')
+  } catch (e) {
+    ElMessage.error('复制失败')
+  }
 }
 
 function closeCodeDialog() {
